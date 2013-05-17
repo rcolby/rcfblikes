@@ -7,17 +7,42 @@ class ChartController < ApplicationController
     @likes = @graph.get_connections("me", "likes")
     @data = {}
 
-    @likes.each do |like|
-      date = @data[Date.strptime(like["created_time"]).strftime("%Y-%m")]
-      if @data.has_key?(date)
-        @data[date] += 1
-      else
-        @data[date] = 1
-      end
-
+    @data = @likes.group_by do |l|
+      Date.strptime(l['created_time']).strftime("%Y-%m")
     end
 
-    render :json => @data
+    @data.each do |year_month, group|
+      @data[year_month] = group.size
+    end
+
+    (2009..2012).each do |year|
+      (1..12).each do |month|
+        if month < 10
+          month = "#{0}#{month}"
+        end
+        @data["#{year}-#{month}"] ||= 0
+      end
+    end
+
+    @data = @data.sort
+
+    @data.map! do |a|
+      {:title => a[0], :value => a[1]}
+    end
+
+    @result = {
+                :graph => {
+                  :title => "Facebook Likes Over Time",
+                  :datasequences => [
+                    {
+                      :title => "#likes/month",
+                      :datapoints => @data
+                    },
+                  ]
+                } 
+              }
+
+    render :json => @result
   end
 
 end
