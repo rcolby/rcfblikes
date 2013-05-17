@@ -6,7 +6,6 @@ gem 'koala'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 group :test do
   gem 'simplecov'
@@ -14,6 +13,7 @@ group :test do
 end
 
 group :development do
+  gem 'sqlite3'
   gem 'pry-rails'
   gem 'pry-debugger'
 end
