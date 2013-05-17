@@ -1,0 +1,33 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/rob/Google Drive/WDI/fb_statusboard/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/rob/Google Drive/WDI/fb_statusboard/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/rob/Google Drive/WDI/fb_statusboard/app/helpers/chart_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/rob/Google Drive/WDI/fb_statusboard/app/controllers/chart_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/rob/Google Drive/WDI/fb_statusboard/app/models/chart.rb": [
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1368744935
+  }
+}
