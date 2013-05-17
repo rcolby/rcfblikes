@@ -2,7 +2,7 @@ require 'date'
 
 class ChartController < ApplicationController
   def index
-    oauth = "CAACEdEose0cBAAS3FPrjwHjDTaZC3kXR84ZBl4mJHfGS6OvjXsY6yXaNvItZBd8T1WKl5ZCcQ6QJVCB16b38lalmai8rDntWNHPwh1cclhaxadtEvXkZAzbUOg1NWKvrIKdMoNRh6hBZBElOVG4CJWrPopDQtq33Pi59aZAEN4qQwZDZD"
+    oauth = "CAACEdEose0cBAJ8bEShhs8R7HGg0BW50AVr5SHjMy2WRm1VQVqaFDYQbim4VrvbqUGZA68C4lObMJTXuhNZCZBMDHVChWf2SyJSSIxf9NStUedyvEcN5q6w2ZBtoqZAwEqkCrZAdIkSw2wPY1VlFI4FXiA15ASicZB8U8mIZBC79ZBgZDZD"
     @graph = Koala::Facebook::API.new(oauth)
     @likes = @graph.get_connections("me", "likes")
     @data = {}
