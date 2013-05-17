@@ -36,6 +36,7 @@ class ChartController < ApplicationController
                   :datasequences => [
                     {
                       :title => "#likes/month",
+                      :refreshEveryNSeconds => 30,
                       :datapoints => @data
                     },
                   ]
