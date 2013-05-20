@@ -14,27 +14,27 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-17T14:03:01-07:00">2013-05-17T14:03:01-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-17T14:24:56-07:00">2013-05-17T14:24:56-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">35.48%</span></span>
+    (<span class="covered_percent"><span class="red">25.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.76
+         0.68
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>31</b> relevant lines. 
+    <b>44</b> relevant lines. 
     <span class="green"><b>11</b> lines covered</span> and
-    <span class="red"><b>20</b> lines missed </span>
+    <span class="red"><b>33</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -92,12 +92,12 @@
       
       <tr>
         <td class="strong"><a href="#1ba3c0cf46a1e431c33064b7fb3cdce2ee531463" class="src_link" title="app/models/chart.rb">app/models/chart.rb</a></td>
-        <td class="red strong">60.0 %</td>
-        <td>10</td>
-        <td>5</td>
+        <td class="red strong">16.67 %</td>
+        <td>34</td>
+        <td>18</td>
         <td>3</td>
-        <td>2</td>
-        <td>0.6</td>
+        <td>15</td>
+        <td>0.2</td>
       </tr>
       
     </tbody>
@@ -166,20 +166,20 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="red">60.0%</span></span>
+    (<span class="covered_percent"><span class="red">16.67%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.6
+         0.2
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
     <b>1</b> files in total.
-    <b>5</b> relevant lines. 
+    <b>18</b> relevant lines. 
     <span class="green"><b>3</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed </span>
+    <span class="red"><b>15</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -197,12 +197,12 @@
       
       <tr>
         <td class="strong"><a href="#1ba3c0cf46a1e431c33064b7fb3cdce2ee531463" class="src_link" title="app/models/chart.rb">app/models/chart.rb</a></td>
-        <td class="red strong">60.0 %</td>
-        <td>10</td>
-        <td>5</td>
+        <td class="red strong">16.67 %</td>
+        <td>34</td>
+        <td>18</td>
         <td>3</td>
-        <td>2</td>
-        <td>0.6</td>
+        <td>15</td>
+        <td>0.2</td>
       </tr>
       
     </tbody>
@@ -823,11 +823,11 @@
         <div class="source_table" id="1ba3c0cf46a1e431c33064b7fb3cdce2ee531463">
   <div class="header">
     <h3>app/models/chart.rb</h3>
-    <h4><span class="red">60.0 %</span> covered</h4>
+    <h4><span class="red">16.67 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
+      <b>18</b> relevant lines. 
       <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="red"><b>15</b> lines missed.</span>
     </div>
   </div>
   
@@ -882,13 +882,157 @@
           <code class="ruby">    @likes = @graph.get_connections(&quot;me&quot;, &quot;likes&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">    @data = {}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">    @data = @likes.group_by do |l|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
+          
+          <code class="ruby">      Date.strptime(l['created_time']).strftime(&quot;%Y-%m&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">    @data.each do |year_month, group|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
+          <code class="ruby">      @data[year_month] = group.size</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
+          <code class="ruby">    (2009..2012).each do |year|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
+          
+          <code class="ruby">      (1..12).each do |month|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
+          
+          <code class="ruby">        if month &lt; 10</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
+          
+          <code class="ruby">          month = &quot;#{0}#{month}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
+          
+          <code class="ruby">        @data[&quot;#{year}-#{month}&quot;] ||= 0</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">    @data = @data.sort</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
+          
+          <code class="ruby">    @data.map! do |a|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
+          
+          <code class="ruby">      {:title =&gt; a[0], :value =&gt; a[1]}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">end</code>

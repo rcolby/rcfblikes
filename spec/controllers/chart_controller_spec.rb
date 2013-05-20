@@ -4,9 +4,9 @@ describe ChartController do
 
   describe "#statusboard" do
 
-    describe "index" do
+    describe "statusboard" do
       it "should respond successfuly." do
-        get :index
+        get :statusboard
         expect(response).to be_success
         expect(response.status).to eq 200
       end

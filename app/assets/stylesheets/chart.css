@@ -2,11 +2,12 @@ h1 {
   text-align: center;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 18px;
-  color: red;
 }
 
-h2 {
-  font-family: Palatino, Times, serif;
-  font-size: 16px;
-  text-align: center;
+.chart {
+  width: 800px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #0C4C99;
 }
