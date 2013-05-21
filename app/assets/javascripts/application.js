@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require raphael-min
 //= require morris.min
-//= require_tree .
+//= require d3.v3.min
+//= require morris-chart.js
+//= require deethree.chart
+

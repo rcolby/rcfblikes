@@ -32,4 +32,8 @@ class ChartController < ApplicationController
     render :json => @data
   end
 
+  def d3
+
+  end
+
 end
